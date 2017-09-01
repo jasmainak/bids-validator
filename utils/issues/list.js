@@ -326,5 +326,15 @@ module.exports = {
         key: 'SESSION_LABEL_IN_FILENAME_DOESNOT_MATCH_DIRECTORY',
         severity: 'error',
         reason: 'Session label in the filename doesn\'t match with the path of the file. File seems to be saved in incorrect session directory.'
+    },
+    66: {
+        key: 'CHANNELS_COLUMN_NAME',
+        severity: 'error',
+        reason:   "First column of the channels file must be named 'name'"
+    },
+    67: {
+        key: 'CHANNELS_COLUMN_TYPE',
+        severity: 'error',
+        reason:   "Second column of the events file must be named 'type'"
     }
 };
