@@ -316,5 +316,15 @@ module.exports = {
         key: 'SESSION_VALUE_CONTAINS_ILLEGAL_CHARECTER',
         severity: 'error',
         reason: 'Ses label contain an Illegal Character hyphen or underscore. Please edit the filename as per BIDS spec.',
+    },
+    64: {
+        key: 'CHANNELS_COLUMN_NAME',
+        severity: 'error',
+        reason:   "First column of the channels file must be named 'name'"
+    },
+    65: {
+        key: 'CHANNELS_COLUMN_TYPE',
+        severity: 'error',
+        reason:   "Second column of the channels file must be named 'type'"
     }
 };

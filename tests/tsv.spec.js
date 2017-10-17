@@ -109,4 +109,35 @@ describe('TSV', function(){
         });
     });
 
+// channels checks -----------------------------------------------------------------
+
+var channelsFile = {
+        name: 'sub-01_ses-meg_task-facerecognition_run-01_channels.tsv',
+        relativePath: '/sub-01/ses-meg/meg/sub-01_ses-meg_task-facerecognition_run-01_channels.tsv'
+    };
+
+    it("should not allow channels.tsv files without name columns", function () {
+        var tsv = 'header-one\ttype\t4eader-three\n' +
+            'value-one\tvalue-two\tvalue-three';
+        validate.TSV(channelsFile, tsv, [], function (issues) {
+            assert(issues.length === 1 && issues[0].code === 64);
+        });
+    });
+
+    it("should not allow channels.tsv files without name columns", function () {
+        var tsv = 'name\theader-two\t4eader-three\n' +
+            'value-one\tvalue-two\tvalue-three';
+        validate.TSV(channelsFile, tsv, [], function (issues) {
+            assert(issues.length === 1 && issues[0].code === 65);
+        });
+    });
+
+
+    it("should not allow channels.tsv files without name columns", function () {
+        var tsv = 'name\ttype\t4eader-three\n' +
+            'value-one\tvalue-two\tvalue-three';
+        validate.TSV(channelsFile, tsv, [], function (issues) {
+            assert(issues.length === 0);
+        });
+    });
 });
