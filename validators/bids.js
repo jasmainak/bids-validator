@@ -116,7 +116,10 @@ BIDS = {
                             path[1] == 'anat' ||
                             path[1] == 'func' ||
                             path[1] == 'dwi'
-                        ) &&
+                        ) ||
+                        (path[0].includes('.json') &&
+                         path[1] == 'meg')
+                        &&
                         (
                             (path[2] && path[2].indexOf('ses-') == 0) ||
                             (path[2] && path[2].indexOf('sub-') == 0)

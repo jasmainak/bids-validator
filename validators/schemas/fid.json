@@ -1,0 +1,44 @@
+{
+        "type": "object",
+        "properties": {
+                "MEGCoordinateSystem": {"type": "string","minLength": 1},
+                "MEGCoordinateUnits": {"type": "string","minLength": 1},
+                "MEGCoordinateSystemDescription": {"type": "string"},
+                "EEGCoordinateSystem": {"type": "string","minLength": 1},
+                "EEGCoordinateUnits": {"type": "string","minLength": 1},
+                "EEGCoordinateSystemDescription": {"type": "string"},
+                "IntendedFor": {"type": "string","minLength": 1},
+                "AnatomicalMRICoordinateSystem": {"type": "string","minLength": 1},
+                "AnatomicalMRICoordinateUnits": {"type": "string","minLength": 1},
+                "AnatomicalMRICoordinateSystemDescription": {"type": "string"},
+                "CoilCoordinates": {"type": "object",
+                                    "additionalProperties": {"type": "array"}
+                                   },
+                "CoilCoordinateSystem": {"type": "string","minLength": 1},
+                "CoilCoordinateUnits": {"type": "string","minLength": 1},
+                "CoilCoordinateSystemDescription": {"type": "string"},
+                "LandmarkCoordinates": {"type": "object",
+                                        "additionalProperties": {"type": "array"}
+                                       },
+                "LandmarkCoordinateSystem": {"type": "string","minLength": 1},
+                "LandmarkCoordinateUnits": {"type": "string","minLength": 1},
+                "LandmarkCoordinateSystemDescription": {"type": "string"},
+                "DigitizedHeadPoints": {"type": "string"},
+                "DigitizedHeadPointsCoordinateSystem": {"type": "string"},
+                "DigitizedHeadPointsCoordinateUnits": {"type": "string"},
+                "DigitizedHeadPointsCoordinateSystemDescription": {"type": "string"}
+                },
+        "required": ["MEGCoordinateSystem",
+                    "MEGCoordinateUnits",
+                    "IntendedFor",
+                    "AnatomicalMRICoordinateSystem",
+                    "AnatomicalMRICoordinateUnits",
+                    "CoilCoordinates",
+                    "CoilCoordinateSystem",
+                    "CoilCoordinateUnits",
+                    "LandmarkCoordinates",
+                    "LandmarkCoordinateSystem",
+                    "LandmarkCoordinateUnits"
+                  ],
+        "additionalProperties": false
+}
